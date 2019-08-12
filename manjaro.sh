@@ -1,4 +1,4 @@
-sudo pacman -S gcc r python gcc-fortran base-devel cmake unzip ninja
+sudo pacman -S gcc r python gcc-fortran base-devel cmake unzip ninja xclip
 sudo pacman -Rdd tmux
 
 # Instalaciòn de neovim
@@ -16,3 +16,16 @@ sudo ln -s /var/lib/snapd/snap /snap
 
 # Instalaciòn de aplicaciones utilizando snap - si no funciona se debe reiniciar.
 sudo snap install discord
+
+# Configuración de github 
+git config --global user.name "Justo Manrique Urbina"
+git config --global user.email ja.manrique@pm.me
+
+git clone git://github.com/jamanrique/linux-conf.git ~/Documents/linux-conf
+
+ssh-keygen -t rsa -b 4096 -C "ja.manrique@pm.me"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+xclip -sel clip < ~/.ssh/id_rsa.pub
+
