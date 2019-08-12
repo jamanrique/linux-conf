@@ -1,4 +1,4 @@
-sudo pacman -S gcc r python gcc-fortran base-devel cmake unzip ninja xclip npm
+sudo pacman -S gcc r python gcc-fortran base-devel cmake unzip ninja xclip npm python-pip yarn
 sudo pacman -Rdd tmux
 
 # Instalaciòn de neovim
@@ -29,3 +29,6 @@ ssh-add ~/.ssh/id_rsa
 
 xclip -sel clip < ~/.ssh/id_rsa.pub
 
+# Configuración de neovim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
