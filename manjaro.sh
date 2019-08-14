@@ -1,4 +1,4 @@
-sudo pacman -S gcc r python gcc-fortran base-devel cmake unzip ninja xclip npm python-pip yarn
+sudo pacman -S gcc r python gcc-fortran base-devel cmake unzip ninja xclip npm python-pip yarn zathura inkscape
 sudo pacman -Rdd tmux
 
 # Instalaciòn de neovim
